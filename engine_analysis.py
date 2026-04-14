@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# -------------------------------
-# USER INPUT (SIMPLE VERSION)
-# -------------------------------
+
+# USER INPUT
 
 print("Enter values (press Enter or type 0 to use default values)\n")
 
@@ -28,31 +27,27 @@ if F_input == "" or F_input == "0":
 else:
     F = float(F_input)
 
-# -------------------------------
+
 # CRANK ANGLE
-# -------------------------------
 theta = np.linspace(0, 2*np.pi, 500)
 theta_deg = np.degrees(theta)
 
-# -------------------------------
+
 # CALCULATIONS
-# -------------------------------
 
 # Displacement
 x = r * np.cos(theta) + np.sqrt(l**2 - (r * np.sin(theta))**2)
 
-# Velocity (rate of change of displacement)
+# Velocity 
 v = np.gradient(x, theta)
 
-# Acceleration (rate of change of velocity)
+# Acceleration 
 a = np.gradient(v, theta)
 
-# Torque (simple model)
+# Torque 
 torque = F * r * np.sin(theta)
 
-# -------------------------------
 # PLOTTING
-# -------------------------------
 
 # Displacement
 plt.figure()
@@ -94,9 +89,8 @@ plt.grid()
 plt.savefig("torque.png")
 plt.show()
 
-# -------------------------------
+
 # RESULTS
-# -------------------------------
 
 print("\nValues Used:")
 print("r =", r)
