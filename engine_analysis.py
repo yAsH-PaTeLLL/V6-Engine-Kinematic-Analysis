@@ -1,6 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+"""
+Kinematic and Torque Analysis of a V6 Engine
+Author: Yash Patel
+Description:
+This script calculates piston displacement, velocity, acceleration,
+and torque variation using a slider-crank mechanism.
+"""
 
 # USER INPUT
 
